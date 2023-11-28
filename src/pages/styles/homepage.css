@@ -27,6 +27,11 @@
 	width: 85% !important;
 }
 
+.homepage-name {
+	font-weight: 800;
+	width: 85% !important;
+}
+
 .homepage-subtitle {
 	width: 85% !important;
 }
@@ -111,6 +116,13 @@
 		margin-top: 20px;
 		order: 2;
 	}
+
+	.homepage-name {
+		width: 100% !important;
+		margin-top: 20px;
+		order: 2;
+	}
+
 
 	.homepage-subtitle {
 		width: 100% !important;

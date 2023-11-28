@@ -1,24 +1,23 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
+		title: "김지은, Portfolio",
 		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		email: "jxixeun@gmail.com",
 		logo: "../logo.png",
 	},
 
 	socials: {
-		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
-		stackoverflow: "https://stackoverflow.com/",
-		facebook: "https://facebook.com/",
+		github: "https://github.com/jxixeun",
+		tistory: "https://xntifrxgile.tistory.com/"
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		name: "김지은",
+		title: "Backend Developer",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"기능 요구사항을 명확히 이해하려 노력하며,안정성있는 코드를 위해 테스트 코드 작성에 유의하고 있습니다.",
+		description2: "가독성있고 유지보수 쉬운 코드를 작성하기 위해 노력하고 있습니다.",
+		description3: "‘함께 일하고 싶은 개발자’가 되는 것을 목표로 하고 있습니다.",
 	},
 
 	about: {
@@ -35,46 +34,57 @@ const INFO = {
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "EA-RA (어라)",
+			team: "팀 프로젝트 (BE 3, FE 3)",
+			period: "2023.10 ~ 2023.11 (7주)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"탄소 중립 활동을 하며 환경 보호를 실천하는 서비스",
+			logo: "eara.png",
+			stack : [
+				"Spring Boot", "Spring Cloud", "MariaDB", "RabbitMQ"	
+			],
+			linkText: "View Project",
+			link: "/article/1",
+		},
+
+		{
+			title: "POPPING",
+			team: "팀 프로젝트 (BE 4, FE 2)",
+			period: "2023.07 ~ 2023.08 (7주)",
+			description:
+				"시간이 지나면 사라지는 익명 메시지 서비스",
+			logo: "popping.png",
+			stack : [
+				"Spring Boot", "Spring Cloud", "MariaDB", "RabbitMQ"	
+			],
 			linkText: "View Project",
 			link: "https://github.com",
 		},
 
 		{
-			title: "Project 2",
+			title: "Emotion Bank",
+			team: "팀 프로젝트 (BE 4, FE 2)",
+			period: "2023.08 ~ 2023.10 (7주)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+				"감정을 금액으로 수치화해 보관하는 은행 서비스",
+			logo: "emotionbank.png",
+			stack : [
+				"Spring Boot", "Spring Cloud", "MariaDB", "RabbitMQ"	
+			],
 			linkText: "View Project",
 			link: "https://github.com",
 		},
 
 		{
-			title: "Project 3",
+			title: "OvTrip",
+			team: "팀 프로젝트 (BE/FE 2)",
+			period: "2023.05 (4주)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 4",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 5",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"간편한 여행 계획 관리 서비스",
+			logo: "ovtrip.png",
+			stack : [
+				"Spring Boot", "Spring Cloud", "MariaDB", "RabbitMQ"	
+			],
 			linkText: "View Project",
 			link: "https://github.com",
 		},
