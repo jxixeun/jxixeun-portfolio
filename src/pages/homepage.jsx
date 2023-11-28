@@ -153,6 +153,7 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-projects">
+							<div className="title homepage-name">Projects</div>
 							<AllProjects />
 						</div>
 

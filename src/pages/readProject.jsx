@@ -8,17 +8,21 @@ import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 
 import INFO from "../data/user";
-import myArticles from "../data/articles";
+import myProjects from "../data/projects";
 
-import "./styles/readArticle.css";
+import "./styles/readProject.css";
+
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 let ArticleStyle = styled.div``;
 
-const ReadArticle = () => {
+const ReadProject = () => {
 	const navigate = useNavigate();
 	let { slug } = useParams();
 
-	const article = myArticles[slug - 1];
+	const article = myProjects[slug - 1];
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -63,7 +67,48 @@ const ReadArticle = () => {
 								</div>
 							</div>
 							<div className="read-article-body">
-								<ArticleStyle>{article().body}</ArticleStyle>
+								<img
+									src={article().thumbnail_image}
+									alt="project thumbnail"
+									class="project-image"
+								/>
+								<div class="links">
+									{article().links.map((data, index) => (
+										<div>
+											<a href={data.url}>
+												<FontAwesomeIcon
+													icon={faLink}
+												/>{" "}
+												{data.info}
+											</a>
+										</div>
+									))}
+								</div>
+
+								<div class="project-description">
+									{article().long_description}
+								</div>
+								<h2>🛠️ 기술 스택</h2>
+								<div class="stacks">
+									{article().stacks.map((data, index) => (
+										<li>{data}</li>
+									))}
+								</div>
+								<h2>👨‍🔧 아키텍처 다이어그램</h2>
+								<img
+									class="architecture-image"
+									src={article().architecture_image}
+								/>
+								<h2>🙋‍♀️ 맡은 역할</h2>
+								{article().develop_role.map((data, index) => (
+									<li>{data}</li>
+								))}
+								<h2>💻 개발 내용</h2>
+								<ArticleStyle>
+									{article().develop_content}
+								</ArticleStyle>
+								<h2>✍️ 회고</h2>
+								<ArticleStyle>{article().review}</ArticleStyle>
 							</div>
 						</div>
 					</div>
@@ -76,4 +121,4 @@ const ReadArticle = () => {
 	);
 };
 
-export default ReadArticle;
+export default ReadProject;

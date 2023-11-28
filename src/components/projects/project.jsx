@@ -17,11 +17,13 @@ const Project = (props) => {
 							<img src={logo} alt="logo" />
 						</div>
 						<div className="project-title">{title}</div>
-						<div className="project-description">2023.10 ~ 2023.11 (7주)</div>
-						<div className="project-description">{team}</div>
-						<div>{stack.map((skill, index) => (
-							<span class="tag tag-javascript tag-sm">{skill}</span>
-						))}</div>
+						<div>
+							{stack.map((skill, index) => (
+								<span class="tag tag-javascript tag-sm">
+									{skill}
+								</span>
+							))}
+						</div>
 						<div className="project-description">{description}</div>
 						<div className="project-link">
 							<div className="project-link-icon">
