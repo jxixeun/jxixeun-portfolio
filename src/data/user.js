@@ -68,7 +68,7 @@ const INFO = {
 			logo: "ovtrip.png",
 			stack: ["Spring Boot", "Spring Cloud", "MyBatis", "Vue.js"],
 			linkText: "View Project",
-			link: "/article/1",
+			link: "/project/3",
 		},
 	],
 };

@@ -109,11 +109,16 @@ const ReadProject = () => {
 										<li>{data}</li>
 									))}
 								</div>
-								<h2>👨‍🔧 아키텍처 다이어그램</h2>
-								<img
-									class="architecture-image"
-									src={article().architecture_image}
-								/>
+								{article().architecture_image && (
+									<>
+										<h2>👨‍🔧 아키텍처 다이어그램</h2>
+										<img
+											className="architecture-image"
+											src={article().architecture_image}
+											alt="아키텍처 다이어그램"
+										/>
+									</>
+								)}
 								<h2>🙋‍♀️ 맡은 역할</h2>
 								{article().develop_role.map((data, index) => (
 									<li>{data}</li>
