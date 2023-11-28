@@ -41,7 +41,7 @@ const INFO = {
 			logo: "eara.png",
 			stack: ["Spring Boot", "Spring Cloud", "MariaDB", "RabbitMQ"],
 			linkText: "View Project",
-			link: "/project/1",
+			link: "/project/4",
 		},
 
 		{
@@ -50,7 +50,7 @@ const INFO = {
 			logo: "popping.png",
 			stack: ["Spring Boot", "Spring Data JPA", "MariaDB", "Docker"],
 			linkText: "View Project",
-			link: "/article/1",
+			link: "/project/1",
 		},
 
 		{
@@ -59,7 +59,7 @@ const INFO = {
 			logo: "emotionbank.png",
 			stack: ["Spring Boot", "MySQL", "MongoDB", "FCM"],
 			linkText: "View Project",
-			link: "/article/3",
+			link: "/project/2",
 		},
 
 		{

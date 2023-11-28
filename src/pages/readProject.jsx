@@ -24,6 +24,21 @@ const ReadProject = () => {
 
 	const article = myProjects[slug - 1];
 
+	const StyledLink = styled.a`
+		padding-left: 5px;
+		font-size: 16px;
+		font-weight: 600;
+		text-decoration-line: none;
+		color: #52525b;
+		display: inline;
+		box-shadow: inset 0 -10px 0 ${article().linkcolor};
+
+		&:hover {
+			color: ${article().hovercolor}; // hover 상태의 색상
+			transition: color 0.3s ease-in-out;
+		}
+	`;
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [article]);
@@ -75,12 +90,12 @@ const ReadProject = () => {
 								<div class="links">
 									{article().links.map((data, index) => (
 										<div>
-											<a href={data.url}>
+											<StyledLink href={data.url}>
 												<FontAwesomeIcon
 													icon={faLink}
 												/>{" "}
 												{data.info}
-											</a>
+											</StyledLink>
 										</div>
 									))}
 								</div>
