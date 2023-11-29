@@ -33,7 +33,7 @@
 .stack-title {
 	min-width: 30%;
 	max-width: 20%;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 500;
 }
 
@@ -44,7 +44,6 @@
 	flex-basis: 80%;
 	min-width: 700px;
 	mix-blend-mode: normal;
-	border-radius: 20px;
-	font-size: 16px;
+	font-size: 16px !important;
 	line-height: 28px;
 }

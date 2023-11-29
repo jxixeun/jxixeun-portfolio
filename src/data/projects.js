@@ -678,20 +678,268 @@ function article_3() {
 
 function article_4() {
 	return {
-		date: "7 May 2023",
-		title: "Artificial Intelligence in Healthcare",
-		description:
-			"AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology.",
-		style: ``,
+		period: "2023.10 ~ 2023.11 (7주)",
+		title: "🌱 EARA",
+		description: "탄소 중립 활동을 하며 환경 보호를 실천하는 서비스",
+		linkcolor: "#e8fd8b",
+		hovercolor: "#cbf58c",
+		links: [
+			{
+				info: "영상 URL",
+				url: "https://www.youtube.com/watch?v=8FcnqC_jvRc",
+			},
+			{
+				info: "Github URL",
+				url: "https://github.com/We-Eokam/Ea-ra",
+			},
+		],
+		stacks: [
+			"Java, Spring Boot, Gradle",
+			"MariaDB, Spring Data JPA",
+			"Spring Cloud, RabbitMQ",
+			"Amazon EC2, Amazon S3, Docker, Jenkins, Nginx, SonarQube, Jacoco, Git, Gitlab, Jira",
+		],
+		develop_role: [
+			"데이터베이스 설계 참여",
+			"서버 구조 설계 참여",
+			"Amazon S3를 이용한 파일 업로드 구현",
+			"활동으로 인한 재화 적립 서버 구현",
+			"환경 오염 활동 제보 서버 구현",
+			"Jenkins와 Docker를 이용해 배포 진행",
+			"SonarQube 적용",
+		],
 		keywords: [
-			"Artificial Intelligence in Healthcare",
+			"Spring Boot",
 			"Tharindu",
 			"Tharindu N",
 			"Tharindu Nayanajith",
 		],
-		body: (
+		role: "백엔드 개발, 인프라",
+		team: "팀 프로젝트 (BE 3, FE 3)",
+		thumbnail_image: "../eara-thumbnail.png",
+		architecture_image: "../eara-ad.png",
+		long_description:
+			"EARA는 친구와 함께 탄소 중립 활동을 하며 환경 보호를 실천하는 서비스입니다. 탄소 중립 포인트와 연결하여, 사용자가 한 환경 보호 활동에 대해서 얼마나 많은 탄소 중립 포인트를 얻을 수 있는지 수치적으로 분석하고 그래프로 확인할 수 있습니다.",
+		develop_content: (
 			<React.Fragment>
-				<h1>Content of sdfsdf 2</h1>
+				<h3>■ AS IS</h3>
+				<ul>
+					<li>
+						Business
+						<ul>
+							<li>
+								제보장을 가진 사용자는 환경 오염을 한 친구를
+								제보할 수 있다.
+								<ul>
+									<li>
+										제보할 때는 대상, 제보 내용, 사진을
+										입력해야 한다.
+										<ul>
+											<li>
+												<li>
+													제보 내용이 '기타'인 경우
+													제보 세부 내용을 사용자가
+													작성해야 한다.
+												</li>
+											</li>
+										</ul>
+									</li>
+									<li>
+										제보 시 제보장의 개수가 1개씩 줄어든다.
+									</li>
+								</ul>
+							</li>
+							<li>회원은 자신이 받은 제보를 볼 수 있다</li>
+						</ul>
+						<ul>
+							<li>
+								다른 유저의 페이지에 갔을 때, 자신이 보낸
+								제보장만 볼 수 있다.
+							</li>
+							<li>
+								회원은 환경 보호 활동을 하거나 제보를 당함으로써
+								재화를 쌓거나 잃을 수 있다.
+							</li>
+							<li>
+								최근 일주일/한 달 간 적립된 일별 재화 양과 활동
+								횟수를 조회할 수 있다.
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						Tech
+						<ul>
+							<li>REST API로 구현합니다.</li>
+						</ul>
+						<ul>
+							<li>
+								이미지 등록은 클라우드 서비스에 합니다. (Amazon
+								S3)
+							</li>
+						</ul>
+						<ul>
+							<li>모든 기능은 로그인한 유저만 가능합니다.</li>
+						</ul>
+						<ul>
+							<li>AWS EC2에 Docker를 이용해 배포합니다.</li>
+						</ul>
+						<ul>
+							<li>
+								제보장의 개수는 User Service에 요청해서 줄여야
+								합니다.
+							</li>
+						</ul>
+						<ul>
+							<li>
+								제보를 한 뒤 해당하는 활동에 대한 재화 적립을
+								요청해야합니다.
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<h3>■ Challenge</h3>
+				<ul>
+					<li>Spring Boot를 이용해 REST API를 구현</li>
+				</ul>
+				<ul>
+					<li>Amazon S3와 멀티파트를 이용해 파일 업로드 기능 구현</li>
+				</ul>
+				<ul>
+					<li>
+						MSA 구조로 백엔드 서버를 개발
+						<ul>
+							<li>
+								속도 개선을 위해 통신 후 응답이 필요하지 않은
+								경우 비동기로 진행하기로 했습니다.   
+							</li>
+						</ul>
+						<ul>
+							<li>
+								요청이 누락되지 않게 하기 위해
+								메시지큐(RabbitMQ)를 사용했습니다.
+							</li>
+						</ul>
+						<ul>
+							<li>
+								응답이 필요한 경우 Feign Client를 사용하여 보다
+								간편하게 코드를 구현했습니다
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						정적 코드 분석 및 테스트 커버리지 측정
+						<ul>
+							<li>
+								테스트 커버리지의 목표를 80%로 하고 테스트
+								코드를 작성했습니다.
+							</li>
+						</ul>
+						<ul>
+							<li>
+								Junit과 Mockito, Rest Assured를 이용해 테스트
+								코드를 작성했습니다.
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						인수 테스트 주도 개발 진행
+						<ul>
+							<li>
+								휴먼 에러를 줄이고, 코드의 품질과 요구사항에
+								대한 이해를 높이기 위해  인수 테스트 주도 개발을
+								진행했습니다. 
+							</li>
+						</ul>
+						<ul>
+							<li>
+								가독성을 높이기 위해 한글 메서드 네이밍을
+								사용했습니다.
+							</li>
+						</ul>
+						<ul>
+							<li>
+								개인 알림의 경우 디바이스 토큰을 이용해서 발송,
+								전체 알림의 경우 notice topic을 구독하고 있는
+								토큰에게 전송회
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						Github의 Webhook을 이용해 브랜치에 push시 자동으로
+						배포되도록 Jenkins pipeline 작성
+						<ul>
+							<li>
+								Dockerfile을 이용해 이미지 빌드 후 배포 진행
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						pipeline의 build 단계 이후 SonarQube 정적 코드 분석과
+						테스트 커버리지 분석 진행
+					</li>
+				</ul>
+				<h2>🏫 배운점</h2>
+				<ul>
+					<li>MSA에 대해 학습하고 이해할 수 있었습니다.</li>
+					<li>Spring Cloud에 대해서 학습할 수 있었습니다.</li>
+					<li>
+						RabbitMQ와 Feign Client에 대해 학습할 수 있었습니다.
+					</li>
+				</ul>
+			</React.Fragment>
+		),
+		review: (
+			<React.Fragment>
+				<h3>비효율적인 서비스 분할 (굳이 MSA일 필요가 있었는가?)</h3>
+				<p>
+					서비스를 분리했음에도 서비스 간의 상호작용이 많았습니다.
+					서비스와 다른 서비스 간의 경계가 명확하지 않아 MSA로 굳이 할
+					필요가 있었는지 의문점이 들었습니다. 완전히 분리할 수 있는
+					도메인이 아니었기 때문에 A 서비스를 사용해도 B,C와
+					상호작용하는 식의 기능이 많았습니다. 모든 서비스가
+					얽혀있었기 때문에 굳이 MSA 구조로 설계할 필요가 없었다는
+					생각이 들었습니다. 물론 서비스를 제대로 분리했다면
+					괜찮았겠지만, 모든 서비스가 환경 활동 인증, 제보, 적립과
+					얽혀있었기 때문에 개발 비용이나 서버 비용 등 모놀로식으로
+					진행하는 것이 더 나았을 것이라고 생각합니다. Monolothic으로
+					했다면 매우 간단하게 구현할 수 있는 작업을 MSA로 구현해서
+					불필요한 통신이 늘어났습니다. 프론트엔드의 경우 원하는
+					정보를 얻기 위해 API를 매우 여러 번 요청해야 했습니다.
+					이러한 과정에서 서비스 분할이 제대로 이뤄지지 않았다고
+					느꼈으며, 불필요한 아키텍쳐 도입이라고 느끼게 되었습니다.
+				</p>
+				<h3>그럼에도 MSA 개발을 하며 배운 점</h3>
+				<p>
+					MSA를 도입해 개발하며 많은 것을 배웠습니다. 모놀리식으로
+					구현할 때보다 훨씬 더 신경쓸게 많았고,  통신 과정에서 어떤
+					기술을 사용할지도 많은 고민이 되었습니다.  에러가 발생할 때
+					어떤 서버에서 문제가 발생하는지 찾기가 어려워, 기회가 된다면
+					로깅과 분산처리를 진행하고 싶습니다. 프로젝트를 구현하며
+					RabbitMQ와 Feign Client를 사용했는데, 이를 사용하며 동기와
+					비동기에 대해서  더욱 이해도를 높일 수 있었습니다.  현재
+					RabbitMQ의 경우 잘못된 요청이 올 경우 무한히 재시도를
+					진행하는데, DLX를 이용해 재시도 횟수 제한 처리를  진행할
+					예정입니다.
+				</p>
+				<h3>인수 테스트 주도 개발</h3>
+				<p>
+					인수 테스트 주도 개발을 진행하며 테스트 코드 작성과 문서화를
+					강제화 했습니다.  테스트 코드를 먼저 작성하고 API를 구현한
+					뒤 테스트 코드가 통과하는 것을 확인하니 매우 뿌듯했습니다. 
+					테스트 커버리지 목표를 80%로 설정하고 테스트 코드를
+					작성했습니다.  앞으로도 품질이 높은 코드와 휴먼 에러가 적은
+					코드를 작성하기 위해 노력해야겠다고 생각했습니다.
+				</p>
 			</React.Fragment>
 		),
 	};
