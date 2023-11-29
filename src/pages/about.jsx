@@ -11,6 +11,7 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/about.css";
+import Stack from "../components/stack/stack";
 
 const About = () => {
 	useEffect(() => {
@@ -47,9 +48,14 @@ const About = () => {
 								</div>
 
 								<div className="subtitle about-subtitle">
-									{INFO.about.description.map((desc, index) => (
-										<div>{desc}</div>
-									))}
+									{INFO.about.description.map(
+										(desc, index) => (
+											<div>{desc}</div>
+										)
+									)}
+								</div>
+								<div>
+									<Stack stacks={INFO.stacks} />
 								</div>
 								<div>
 									<Summary
@@ -64,7 +70,7 @@ const About = () => {
 								<div className="about-image-container">
 									<div className="about-image-wrapper">
 										<img
-											src="about.jpg"
+											src="about.png"
 											alt="about"
 											className="about-image"
 										/>

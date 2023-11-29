@@ -15,19 +15,18 @@ const Experience = (props) => {
 					<div className="experience-date">{date}</div>
 				</div>
 				<div>
-				<div className="experience-right-side">
+					<div className="experience-right-side">
 						<div className="experience-title">{title}</div>
-						<div className="experience-description">{description}</div>
-						{infos && <div className="experience-infos">{infos.map((info, index) => (
-								<li>{info}</li>
-							))}</div>}
-						<div className="article-link">
-							Read Article{" "}
-							<FontAwesomeIcon
-								style={{ fontSize: "10px" }}
-								icon={faChevronRight}
-							/>
+						<div className="experience-description">
+							{description}
 						</div>
+						{infos && (
+							<div className="experience-infos">
+								{infos.map((info, index) => (
+									<li>{info}</li>
+								))}
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

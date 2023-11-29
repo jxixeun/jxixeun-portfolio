@@ -18,6 +18,7 @@ import Experience from "../components/homepage/experience";
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
 import Summary from "../components/about/summary";
+import Stack from "../components/stack/stack";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -151,6 +152,11 @@ const Homepage = () => {
 									className="homepage-social-icon"
 								/>
 							</a>
+						</div>
+
+						<div className="homepage-projects">
+							<div className="section-title">Stacks</div>
+							<Stack stacks={INFO.stacks} />
 						</div>
 
 						<div className="homepage-projects">

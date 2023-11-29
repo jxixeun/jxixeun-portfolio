@@ -5,6 +5,7 @@
 	border-radius: 20px;
 	opacity: 0.8;
 	height: 100%;
+	border: 2px solid #f4f4f5;
 }
 
 .project a {
@@ -12,7 +13,8 @@
 }
 
 .project:hover {
-	background: #fafafa;
+	background: #fffebd;
+	border: 2px solid #fffebd;
 	opacity: 1;
 	transition: background-color 0.3s ease-in-out;
 }
@@ -81,11 +83,11 @@
 	font-size: 0.7em;
 	display: inline-block;
 	letter-spacing: 0.15ch;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .tag-javascript {
-	background: #f0db4f;
+	background: #ffbf19;
 	color: #000;
 }
 
