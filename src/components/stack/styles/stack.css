@@ -17,6 +17,16 @@
 @media (max-width: 600px) {
 	.stack-container {
 		width: 100%;
+		display: block;
+	}
+
+	.stack-title {
+		width: 100%;
+	}
+
+	.stacklist {
+		margin-top: 10px;
+		width: 100%;
 	}
 }
 
@@ -35,8 +45,6 @@
 	min-width: 700px;
 	mix-blend-mode: normal;
 	border-radius: 20px;
-	opacity: 0.8;
 	font-size: 16px;
 	line-height: 28px;
-	width: 100%;
 }
