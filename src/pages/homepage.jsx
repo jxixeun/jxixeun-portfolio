@@ -17,6 +17,7 @@ import NavBar from "../components/common/navBar";
 import Experience from "../components/homepage/experience";
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
+import Summary from "../components/about/summary";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -153,26 +154,31 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-projects">
-							<div className="title homepage-name">Projects</div>
+							<div className="section-title">Skills</div>
+							<Summary />
+						</div>
+
+						<div className="homepage-projects">
+							<div className="section-title">Projects</div>
 							<AllProjects />
 						</div>
 
 						<div className="homepage-articles">
-						<div className="title homepage-name">Experience</div>
+							<div className="section-title">Experience</div>
 							{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
+								<div
+									className="homepage-article"
+									key={(index + 1).toString()}
+								>
+									<Experience
 										key={(index + 1).toString()}
-									>
-										<Experience
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-											infos={article().infos}
-										/>
-									</div>
+										date={article().date}
+										title={article().title}
+										description={article().description}
+										link={"/article/" + (index + 1)}
+										infos={article().infos}
+									/>
+								</div>
 							))}
 						</div>
 

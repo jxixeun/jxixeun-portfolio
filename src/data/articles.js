@@ -97,6 +97,26 @@ function article_4() {
 	};
 }
 
-const myArticles = [article_1, article_2, article_3, article_4];
+function article_5() {
+	return {
+		date: "2018.03. ~ 2023.02. (졸업)",
+		title: "홍익대학교 컴퓨터·데이터공학부 컴퓨터공학전공",
+		style: ``,
+		style: ``,
+		keywords: [
+			"Artificial Intelligence in Healthcare",
+			"Tharindu",
+			"Tharindu N",
+			"Tharindu Nayanajith",
+		],
+		body: (
+			<React.Fragment>
+				<h1>Content of sdfsdf 2</h1>
+			</React.Fragment>
+		),
+	};
+}
+
+const myArticles = [article_1, article_2, article_3, article_4, article_5];
 
 export default myArticles;

@@ -5,6 +5,7 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
+import Summary from "../components/about/summary";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -46,7 +47,16 @@ const About = () => {
 								</div>
 
 								<div className="subtitle about-subtitle">
-									{INFO.about.description}
+									{INFO.about.description.map((desc, index) => (
+										<div>{desc}</div>
+									))}
+								</div>
+								<div>
+									<Summary
+										backend={INFO.about.backend}
+										software={INFO.about.software}
+										frontend={INFO.about.frontend}
+									/>
 								</div>
 							</div>
 
