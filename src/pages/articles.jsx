@@ -43,12 +43,11 @@ const Articles = () => {
 						<div className="title articles-title">
 							{INFO.articles.title}
 						</div>
-
 						<div className="subtitle articles-subtitle">
 							{INFO.articles.description}
 						</div>
-
 						<div className="articles-container">
+							<h2>Activities</h2>
 							<div className="articles-wrapper">
 								{myArticles.map((article, index) => (
 									<div
@@ -60,7 +59,41 @@ const Articles = () => {
 											date={article().date}
 											title={article().title}
 											description={article().description}
-											link={"/article/" + (index + 1)}
+											infos={article().infos}
+										/>
+									</div>
+								))}
+							</div>
+						</div>
+						<div className="articles-container">
+							<h2>Certifications</h2>
+							<div className="articles-wrapper">
+								{INFO.certifications.map((cert, index) => (
+									<div
+										className="articles-article"
+										key={(index + 1).toString()}
+									>
+										<Article
+											date={cert.date}
+											title={cert.title}
+											description={cert.desc}
+										/>
+									</div>
+								))}
+							</div>
+						</div>
+						<div className="articles-container">
+							<h2>Prize</h2>
+							<div className="articles-wrapper">
+								{INFO.prize.map((cert, index) => (
+									<div
+										className="articles-article"
+										key={(index + 1).toString()}
+									>
+										<Article
+											date={cert.date}
+											title={cert.title}
+											description={cert.desc}
 										/>
 									</div>
 								))}

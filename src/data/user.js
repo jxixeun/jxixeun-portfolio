@@ -51,19 +51,40 @@ const INFO = {
 		frontend: [
 			"Vue.js를 이용한 팀 프로젝트를 통해 프론트엔드 개발 경험 [[Github 링크]](https://github.com/OvTrip/OvTrip_Frontend)",
 		],
-		descridption:
-			"dI've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
 	},
 
 	articles: {
-		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
-		description: [
-			"새로운 기술을 배우고 경험하는 것을 즐깁니다.",
-			"도전적인 목표를 세우고 성취하는 것에 뿌듯함을 느낍니다.",
-			"한 번 시작하면 끝까지 파고드는 기질을 갖고 있습니다.",
-			"다양한 사람들을 만나고 소통하며 성장하는 것을 좋아합니다.",
-		],
+		title: "Experience",
+		description: ["개발 관련 경험들과 자격 내역, 수상 내역입니다."],
 	},
+
+	certifications: [
+		{
+			title: "SQL 개발자 (SQLD)",
+			date: "2023.07.07",
+			desc: "한국데이터산업진흥원",
+		},
+		{
+			title: "HSAT (Hyundai SW Aptitude Test)",
+			date: "2023.08.25",
+			desc: "현대엔지비",
+		},
+	],
+
+	prize: [
+		{
+			title: "2023 삼성 청년 SW 아카데미 1학기 프로젝트 우수상",
+			company: "삼성전자주식회사",
+			date: "2023.05.26",
+			desc: "1학기 과정 프로젝트 경진대회에서 우수 프로젝트로 선정되었습니다. (반 2등)",
+		},
+		{
+			title: "2023 삼성 청년 SW 아카데미 프로젝트 우수상",
+			company: "삼성전자주식회사",
+			date: "2023.08.18",
+			desc: "2학기 과정 공통 프로젝트 경진대회에서 우수 프로젝트로 선정되었습니다. (반 1등)",
+		},
+	],
 
 	projects: [
 		{

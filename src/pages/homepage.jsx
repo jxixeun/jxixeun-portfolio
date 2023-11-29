@@ -170,7 +170,7 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-articles">
-							<div className="section-title">Experience</div>
+							<div className="section-title">Activities</div>
 							{myArticles.map((article, index) => (
 								<div
 									className="homepage-article"

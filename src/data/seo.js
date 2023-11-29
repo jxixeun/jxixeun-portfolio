@@ -1,8 +1,7 @@
 const SEO = [
 	{
 		page: "home",
-		description:
-			"Backend Developer, 김지은",
+		description: "Backend Developer, 김지은",
 		keywords: ["Tharindu", "Tharindu N", "Tharindu Nayanajith"],
 	},
 
