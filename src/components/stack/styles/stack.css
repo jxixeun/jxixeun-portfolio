@@ -16,7 +16,7 @@
 
 @media (max-width: 600px) {
 	.stack-container {
-		width: calc(100% / 2);
+		width: 100%;
 	}
 }
 
