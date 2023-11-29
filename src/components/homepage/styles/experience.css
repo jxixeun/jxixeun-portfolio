@@ -1,0 +1,133 @@
+@import "../../../data/styles.css";
+
+.homepage-article {
+	width: 100%;
+	mix-blend-mode: normal;
+	border-radius: 20px;
+	opacity: 0.8;
+}
+
+
+.homepage-article-content {
+	padding: 20px;
+}
+
+.homepage-article-date {
+	opacity: 1;
+	color: var(--tertiary-color);
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
+.homepage-article-title {
+	opacity: 1;
+	color: var(--primary-color);
+	font-size: 16px;
+	margin-bottom: 1em;
+	font-weight: 700;
+}
+
+.homepage-article-description {
+	opacity: 1;
+	color: var(--secondary-color);
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.homepage-article-link {
+	opacity: 1;
+	padding-top: 20px;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.homepage-article-link a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	.homepage-article {
+		width: 100%;
+	}
+}
+@import "../../../data/styles.css";
+
+.experience {
+	display: flex;
+}
+
+.experience a {
+	text-decoration: none;
+}
+
+.experience-left-side {
+	min-width: 20%;
+	max-width: 20%;
+}
+
+.experience-right-side {
+	flex-basis: 80%;
+	min-width: 700px;
+	mix-blend-mode: normal;
+	border-radius: 20px;
+	opacity: 0.8;
+	padding-right: 0px !important;
+	padding-left: 10px !important;
+	padding: 30px;
+	color:#595959;
+}
+
+.experience-right-side:hover {
+	background: #fafafa;
+	opacity: 1;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.experience-date {
+	padding-top: 30px;
+	font-size: 15px;
+	color: var(--tertiary-color);
+}
+
+.experience-title {
+	color: #000000;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.experience-description {
+	padding-top: 10px;
+	font-size: 16px;
+	color: var(--primary-color);
+	font-weight: 480;
+	line-height: 25px;
+}
+
+.experience-link {
+	padding-top: 10px;
+	font-size: 14px;
+	color: var(--link-color);
+	font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+	.experience-left-side {
+		min-width: 10%;
+		max-width: 10%;
+	}
+
+	.experience-right-side {
+		flex-basis: 90%;
+		min-width: 85%;
+		max-width: 85%;
+	}
+}
+
+.experience-infos {
+	color: var(--primary-color);
+}
+
+.experience-infos li {
+	padding-top:8px;
+}

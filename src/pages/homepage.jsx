@@ -14,7 +14,7 @@ import {
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
+import Experience from "../components/homepage/experience";
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
 
@@ -157,27 +157,23 @@ const Homepage = () => {
 							<AllProjects />
 						</div>
 
-						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
+						<div className="homepage-articles">
+						<div className="title homepage-name">Experience</div>
+							{myArticles.map((article, index) => (
 									<div
 										className="homepage-article"
 										key={(index + 1).toString()}
 									>
-										<Article
+										<Experience
 											key={(index + 1).toString()}
 											date={article().date}
 											title={article().title}
 											description={article().description}
 											link={"/article/" + (index + 1)}
+											infos={article().infos}
 										/>
 									</div>
-								))}
-							</div>
-
-							<div className="homepage-works">
-								<Works />
-							</div>
+							))}
 						</div>
 
 						<div className="page-footer">
