@@ -42,8 +42,10 @@
 }
 .stacklist {
 	flex-basis: 80%;
-	min-width: 700px;
-	mix-blend-mode: normal;
+}
+
+.stacklist li {
 	font-size: 16px !important;
 	line-height: 28px;
+	color: #65656d;
 }
