@@ -7,7 +7,6 @@
 	opacity: 0.8;
 }
 
-
 .homepage-article-content {
 	padding: 20px;
 }
@@ -68,14 +67,13 @@
 
 .experience-right-side {
 	flex-basis: 80%;
-	min-width: 700px;
 	mix-blend-mode: normal;
 	border-radius: 20px;
 	opacity: 0.8;
 	padding-right: 0px !important;
 	padding-left: 10px !important;
 	padding: 30px;
-	color:#595959;
+	color: #595959;
 }
 
 .experience-right-side:hover {
@@ -111,16 +109,23 @@
 	font-weight: 700;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 	.experience-left-side {
-		min-width: 10%;
-		max-width: 10%;
+		max-width: 100%;
+	}
+
+	.experience {
+		display: block;
 	}
 
 	.experience-right-side {
-		flex-basis: 90%;
-		min-width: 85%;
-		max-width: 85%;
+		width: 100%;
+		padding-left: 0px !important;
+		padding: 10px;
+	}
+
+	.experience-right-side li::marker {
+		margin-right: 0px !important;
 	}
 }
 
@@ -128,6 +133,16 @@
 	color: var(--primary-color);
 }
 
+li {
+	list-style-type: none;
+}
+
+li::before {
+	content: "•"; /* 커스텀 마커 */
+	margin-right: 4px; /* 마커와 텍스트 사이 간격 */
+	/* 추가 스타일링 가능 */
+}
+
 .experience-infos li {
-	padding-top:8px;
+	padding-top: 8px;
 }
