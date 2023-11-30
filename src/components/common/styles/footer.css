@@ -49,6 +49,7 @@
 	.footer {
 		flex-direction: column;
 		height: 85px;
+		margin-bottom: 20px;
 	}
 
 	.footer-links {

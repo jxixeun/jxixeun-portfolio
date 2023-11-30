@@ -113,3 +113,9 @@
 .architecture-image {
 	width: 100%;
 }
+
+@media (max-width: 768px) {
+	.read-article-wrapper {
+		width: 100%;
+	}
+}
