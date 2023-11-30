@@ -55,20 +55,24 @@
 	transition: color 0.3s ease-in-out;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.navbar {
 		margin-left: 25%;
 		margin-right: 25%;
-		width: 80%;
+		width: 100%;
 		font-size: 80%;
 	}
 
 	.nav-background {
-		width: 80%;
+		width: 90%;
 		height: 40px;
 	}
 
 	.nav-item {
 		font-weight: bold;
+	}
+
+	.nav-list {
+		margin-top: 12.4px;
 	}
 }
