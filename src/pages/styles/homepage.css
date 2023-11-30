@@ -57,6 +57,8 @@
 }
 
 .homepage-image-wrapper {
+	max-width: 100%;
+	max-height: 100%;
 	overflow: hidden;
 	border-radius: 10%;
 	transform: rotate(3deg);
@@ -144,8 +146,8 @@
 	}
 
 	.homepage-image-container {
-		padding-top: 50px;
-		padding-bottom: 50px;
+		/* padding-top: 50px;
+		padding-bottom: 50px; */
 		margin-left: 10px;
 		order: 1;
 	}
