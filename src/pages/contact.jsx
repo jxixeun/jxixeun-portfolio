@@ -39,9 +39,7 @@ const Contact = () => {
 					</div>
 
 					<div className="contact-container">
-						<div className="title contact-title">
-							제 포트폴리오를 봐주셔서 감사합니다!
-						</div>
+						<div className="title contact-title">Contact</div>
 
 						<div className="subtitle contact-subtitle">
 							관심 갖고 포트폴리오를 읽어주셔서 감사합니다. 저에게

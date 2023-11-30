@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faCopy, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
 	faGithub,
 	faLinkedin,
@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import INFO from "../../data/user";
-
+import CopyToClipboardButton from "../contact/CopyEmail";
 import "./styles/socials.css";
 
 const Socials = () => {
@@ -69,6 +69,7 @@ const Socials = () => {
 					</a>
 				</div>
 			</div>
+			<CopyToClipboardButton textToCopy={INFO.main.email} />
 		</div>
 	);
 };
