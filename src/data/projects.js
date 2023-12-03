@@ -376,163 +376,115 @@ function article_2() {
 		develop_content: (
 			<React.Fragment>
 				<h3>■ AS IS</h3>
-				<ul>
-					<li>
-						Business
-						<ul>
-							<li>
-								사용자는 자신의 입출금 계좌를 1개 개설할 수
-								있습니다.
-								<ul>
-									<li>
-										계좌 개설 시 계좌번호가 생성되며, 다른
-										회원의 계좌 번호와 중복되지
-										않아야합니다.
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<ul>
-							<li>
-								사용자의 일별 대표 기분을 월 단위로 조회할 수
-								있습니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								사용자는 자신이 로그인한 모든 기기에서 알림을
-								받을 수 있습니다.
-								<ul>
-									<li>
-										알림은 전체 알림과 개인 알림 두 종류가
-										존재합니다.
-									</li>
-									<li>
-										전체 알림 생성은 관리자만 할 수
-										있습니다.
-									</li>
-									<li>
-										알림의 양식은 보내는 종류에 따라
-										다릅니다.
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Tech
-						<ul>
-							<li>REST API로 구현합니다.</li>
-						</ul>
-						<ul>
-							<li>
-								전체 알림 생성은 ‘ADMIN’ 타입의 회원만
-								가능합니다.
-							</li>
-						</ul>
-						<ul>
-							<li>AWS EC2로 배포합니다.</li>
-						</ul>
-						<ul>
-							<li>
-								서버는 Docker와 Jenkins를 사용해 Github의
-								브랜치에 push시 자동으로 배포되도록 합니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								SonarQube를 사용해 정적 코드 분석을 진행합니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								localStorage에 토큰을 저장하기 때문에 XSS 방어를
-								진행합니다.
-							</li>
-						</ul>
-					</li>
-				</ul>
+				<li>
+					Business
+					<ul>
+						<li>
+							사용자는 자신의 입출금 계좌를 1개 개설할 수
+							있습니다.
+							<ul>
+								<li>
+									계좌 개설 시 계좌번호가 생성되며, 다른
+									회원의 계좌 번호와 중복되지 않아야합니다.
+								</li>
+							</ul>
+						</li>
+						<li>
+							사용자의 일별 대표 기분을 월 단위로 조회할 수
+							있습니다.
+						</li>
+						<li>
+							사용자는 자신이 로그인한 모든 기기에서 알림을 받을
+							수 있습니다.
+							<ul>
+								<li>
+									알림은 전체 알림과 개인 알림 두 종류가
+									존재합니다.
+								</li>
+								<li>
+									전체 알림 생성은 관리자만 할 수 있습니다.
+								</li>
+								<li>
+									알림의 양식은 보내는 종류에 따라 다릅니다.
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					Tech
+					<ul>
+						<li>REST API로 구현합니다.</li>
+						<li>
+							전체 알림 생성은 ‘ADMIN’ 타입의 회원만 가능합니다.
+						</li>
+						<li>AWS EC2로 배포합니다.</li>
+						<li>
+							서버는 Docker와 Jenkins를 사용해 Github의 브랜치에
+							push시 자동으로 배포되도록 합니다.
+						</li>
+						<li>SonarQube를 사용해 정적 코드 분석을 진행합니다.</li>
+						<li>
+							localStorage에 토큰을 저장하기 때문에 XSS 방어를
+							진행합니다.
+						</li>
+					</ul>
+				</li>
 				<h3>■ Challenge</h3>
-				<ul>
-					<li>Spring Boot를 이용해 REST API를 구현</li>
-				</ul>
-				<ul>
-					<li>
-						계좌 번호가 겹치지 않게 하기 위해 생성 시간의
-						timestamp를 이용해 생성
-					</li>
-				</ul>
-				<ul>
-					<li>
-						데이터 베이스의 경우
-						<ul>
-							<li>계좌와 일별 기분 데이터는 MySQL에 저장</li>
-						</ul>
-						<ul>
-							<li>
-								양식이 없고 종류마다 다른 알림 데이터의 경우
-								MongoDB에 저장
-							</li>
-						</ul>
-						<ul>
-							<li>JPA를 이용해 데이터베이스 조회</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						알림 서비스를 위해 Firebase Cloud Messaging 사용
-						<ul>
-							<li>
-								로그인 할 때마다 디바이스 토큰을 저장하도록 함 →
-								유저의 모든 기기에 알림이 가도록 함
-							</li>
-						</ul>
-						<ul>
-							<li>
-								새로운 토큰을 저장할 때, 전체 알림을 위해 notice
-								Topic을 구독하도록 설정
-							</li>
-						</ul>
-						<ul>
-							<li>
-								개인 알림의 경우 디바이스 토큰을 이용해서 발송,
-								전체 알림의 경우 notice topic을 구독하고 있는
-								토큰에게 전송회
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Github의 Webhook을 이용해 브랜치에 push시 자동으로
-						배포되도록 Jenkins pipeline 작성
-						<ul>
-							<li>
-								Dockerfile을 이용해 이미지 빌드 후 배포 진행
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						pipeline의 build 단계 이후 SonarQube 정적 코드 분석 진행
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Naver의 lucy xss filter를 이용해 XSS 방어 설정
-						<ul>
-							<li>
-								MessageConverter에 처리할 문자열이 설정되어있는
-								Object Mapper를 등록해 JSON 데이터의 XSS 방어
-								설정 진행
-							</li>
-						</ul>
-					</li>
-				</ul>
+				<li>Spring Boot를 이용해 REST API를 구현</li>
+				<li>
+					계좌 번호가 겹치지 않게 하기 위해 생성 시간의 timestamp를
+					이용해 생성
+				</li>
+				<li>
+					데이터 베이스의 경우
+					<ul>
+						<li>계좌와 일별 기분 데이터는 MySQL에 저장</li>
+						<li>
+							양식이 없고 종류마다 다른 알림 데이터의 경우
+							MongoDB에 저장
+						</li>
+						<li>JPA를 이용해 데이터베이스 조회</li>
+					</ul>
+				</li>
+				<li>
+					알림 서비스를 위해 Firebase Cloud Messaging 사용
+					<ul>
+						<li>
+							로그인 할 때마다 디바이스 토큰을 저장하도록 함 →
+							유저의 모든 기기에 알림이 가도록 함
+						</li>
+						<li>
+							새로운 토큰을 저장할 때, 전체 알림을 위해 notice
+							Topic을 구독하도록 설정
+						</li>
+						<li>
+							개인 알림의 경우 디바이스 토큰을 이용해서 발송, 전체
+							알림의 경우 notice topic을 구독하고 있는 토큰에게
+							전송
+						</li>
+					</ul>
+				</li>
+				<li>
+					Github의 Webhook을 이용해 브랜치에 push시 자동으로
+					배포되도록 Jenkins pipeline 작성
+					<ul>
+						<li>Dockerfile을 이용해 이미지 빌드 후 배포 진행</li>
+					</ul>
+				</li>
+				<li>
+					pipeline의 build 단계 이후 SonarQube 정적 코드 분석 진행
+				</li>
+				<li>
+					Naver의 lucy xss filter를 이용해 XSS 방어 설정
+					<ul>
+						<li>
+							MessageConverter에 처리할 문자열이 설정되어있는
+							Object Mapper를 등록해 JSON 데이터의 XSS 방어 설정
+							진행
+						</li>
+					</ul>
+				</li>
 			</React.Fragment>
 		),
 		review: (
@@ -631,142 +583,107 @@ function article_3() {
 		develop_content: (
 			<React.Fragment>
 				<h3>■ AS IS</h3>
-				<ul>
-					<li>
-						Business
-						<ul>
-							<li>
-								사용자는 카카오, 네이버 소셜 로그인을 이용해
-								회원가입, 로그인을 할 수 있습니다.
-								<ul>
-									<li>소셜 플랫폼은 확장 가능해야 합니다.</li>
-								</ul>
-							</li>
-						</ul>
-						<ul>
-							<li>
-								로그인 한 사용자는 가입된 유저를 검색할 수
-								있습니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								자신이 생성한 여행 계획 목록을 확인할 수
-								있습니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								사용자는 로그인 여부와 관계 없이 공지사항을 볼
-								수 있습니다.
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Tech
-						<ul>
-							<li>REST API로 구현합니다.</li>
-						</ul>
-						<ul>
-							<li>로그인은 JWT를 사용하여 진행합니다.</li>
-						</ul>
-						<ul>
-							<li>데이터베이스는 Amazon RDS를 사용합니다.</li>
-						</ul>
-					</li>
-				</ul>
+				<li>
+					Business
+					<ul>
+						<li>
+							사용자는 카카오, 네이버 소셜 로그인을 이용해
+							회원가입, 로그인을 할 수 있습니다.
+							<ul>
+								<li>소셜 플랫폼은 확장 가능해야 합니다.</li>
+							</ul>
+						</li>
+						<li>
+							로그인 한 사용자는 가입된 유저를 검색할 수 있습니다.
+						</li>
+						<li>
+							자신이 생성한 여행 계획 목록을 확인할 수 있습니다.
+						</li>
+						<li>
+							사용자는 로그인 여부와 관계 없이 공지사항을 볼 수
+							있습니다.
+						</li>
+					</ul>
+				</li>
+				<li>
+					Tech
+					<ul>
+						<li>REST API로 구현합니다.</li>
+						<li>로그인은 JWT를 사용하여 진행합니다.</li>
+						<li>데이터베이스는 Amazon RDS를 사용합니다.</li>
+					</ul>
+				</li>
 				<h3>■ Challenge</h3>
-				<ul>
-					<li>Spring Boot를 이용해 REST API를 구현</li>
-				</ul>
-				<ul>
-					<li>
-						JWT를 사용하여 OAuth2.0 소셜 로그인/회원가입 구현, 인증
-						인터셉터 구현을 진행했습니다.
-					</li>
-				</ul>
-				<ul>
-					<li>
-						소셜 로그인 구현시 플랫폼에 간편한 API 요청을 위해
-						Spring Cloud OpenFeign을 사용했습니다.
-						<ul>
-							<li>
-								코드를 간결하게 작성하기 위해 소셜 플랫폼에
-								API를 요청할 때 Spring Cloud의 Feign Client를
-								사용했습니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								다른 소셜 플랫폼에 대한 확장을 열어 두기 위해
-								소셜 플랫폼의 종류에 따라 구현된 서비스를
-								결정하는 팩토리 패턴을 사용했습니다.
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Vue.js를 이용해 프론트엔드 구현, Axios를 이용해 API 요청
-						<ul>
-							<li>
-								빠른 개발 진행을 위해 러닝커브가 낮은
-								프레임워크인 Vue.js를 사용했습니다.
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Argument Resolver를 구현하여 Access Token에서 회원정보를
-						가져올 때 컨트롤러에서 파라미터로 쉽게 받을 수 있게 해
-						편의성을 늘렸습니다. (기존코드 3줄 -> 1줄)
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Preflgiht에 Access token이 담겨있지 않아 API 호출
-						실패하던 에러 해결{" "}
-						<a href="https://xntifrxgile.tistory.com/70">
-							(해결 과정 정리글)
-						</a>
-						<ul>
-							<li>
-								Preflight는 HTTP OPTIONS으로 요청을 보내기
-								때문에, HTTP OPTIONS에 대한 요청은 토큰 값
-								검증을 하지 않도록 변경했습니다.
-							</li>
-						</ul>
-					</li>
-				</ul>
+				<li>Spring Boot를 이용해 REST API를 구현</li>
+				<li>
+					JWT를 사용하여 OAuth2.0 소셜 로그인/회원가입 구현, 인증
+					인터셉터 구현을 진행했습니다.
+				</li>
+				<li>
+					소셜 로그인 구현시 플랫폼에 간편한 API 요청을 위해 Spring
+					Cloud OpenFeign을 사용했습니다.
+					<ul>
+						<li>
+							코드를 간결하게 작성하기 위해 소셜 플랫폼에 API를
+							요청할 때 Spring Cloud의 Feign Client를
+							사용했습니다.
+						</li>
+						<li>
+							다른 소셜 플랫폼에 대한 확장을 열어 두기 위해 소셜
+							플랫폼의 종류에 따라 구현된 서비스를 결정하도록
+							했습니다.
+						</li>
+					</ul>
+				</li>
+				<li>
+					Vue.js를 이용해 프론트엔드 구현, Axios를 이용해 API 요청
+					<ul>
+						<li>
+							빠른 개발 진행을 위해 러닝커브가 낮은 프레임워크인
+							Vue.js를 사용했습니다.
+						</li>
+					</ul>
+				</li>
+				<li>
+					Argument Resolver를 구현하여 Access Token에서 회원정보를
+					가져올 때 컨트롤러에서 파라미터로 쉽게 받을 수 있게 해
+					편의성을 늘렸습니다. (기존코드 3줄 -> 1줄)
+				</li>
+				<li>
+					Preflgiht에 Access token이 담겨있지 않아 API 호출 실패하던
+					에러 해결{" "}
+					<a href="https://xntifrxgile.tistory.com/70">
+						(해결 과정 정리글)
+					</a>
+					<ul>
+						<li>
+							Preflight는 HTTP OPTIONS으로 요청을 보내기 때문에,
+							HTTP OPTIONS에 대한 요청은 토큰 값 검증을 하지
+							않도록 변경했습니다.
+						</li>
+					</ul>
+				</li>
 				<h3>■ TO BE</h3>
-				<ul>
-					<li>
-						삼성 청년 SW 아카데미 프로젝트 경진대회 우수상을
-						받았습니다. (10팀 중 2등)
-					</li>
-				</ul>
+				<li>
+					삼성 청년 SW 아카데미 프로젝트 경진대회 우수상을 받았습니다.
+					(10팀 중 2등)
+				</li>
 				<h2>🏫 배운점</h2>
-				<ul>
-					<li>
-						소셜 회원가입을 구현하며 OAuth2.0에 대해 이해할 수
-						있었습니다.
-					</li>
-					<li>Feign Client에 대해 학습할 수 있었습니다.</li>
-					<li>
-						인터셉터를 구현하며 API 요청 흐름을 이해할 수
-						있었습니다.
-					</li>
-					<li>
-						axios, vuex, router, 비동기에 대해 학습할 수 있었습니다.
-					</li>
-					<li>
-						Gitflow를 적용하여 기능마다 branch를 생성해 개발하며
-						Git에 대해 학습할 수 있었습니다.
-					</li>
-				</ul>
+				<li>
+					소셜 회원가입을 구현하며 OAuth2.0에 대해 이해할 수
+					있었습니다.
+				</li>
+				<li>Feign Client에 대해 학습할 수 있었습니다.</li>
+				<li>
+					인터셉터를 구현하며 API 요청 흐름을 이해할 수 있었습니다.
+				</li>
+				<li>
+					axios, vuex, router, 비동기에 대해 학습할 수 있었습니다.
+				</li>
+				<li>
+					Gitflow를 적용하여 기능마다 branch를 생성해 개발하며 Git에
+					대해 학습할 수 있었습니다.
+				</li>
 			</React.Fragment>
 		),
 		review: (
