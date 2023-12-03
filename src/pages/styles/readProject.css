@@ -135,7 +135,7 @@
 	}
 }
 
-ul {
+.read-article-body ul {
 	padding-left: 20px; /* 기본적인 들여쓰기 조절 */
 	margin-left: 0; /* 왼쪽 마진 제거 */
 	margin-top: 0px;
