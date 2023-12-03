@@ -845,179 +845,131 @@ function article_4() {
 		develop_content: (
 			<React.Fragment>
 				<h3>■ AS IS</h3>
-				<ul>
-					<li>
-						Business
-						<ul>
-							<li>
-								제보장을 가진 사용자는 환경 오염을 한 친구를
-								제보할 수 있다.
-								<ul>
-									<li>
-										제보할 때는 대상, 제보 내용, 사진을
-										입력해야 한다.
-										<ul>
-											<li>
-												<li>
-													제보 내용이 '기타'인 경우
-													제보 세부 내용을 사용자가
-													작성해야 한다.
-												</li>
-											</li>
-										</ul>
-									</li>
-									<li>
-										제보 시 제보장의 개수가 1개씩 줄어든다.
-									</li>
-								</ul>
-							</li>
-							<li>회원은 자신이 받은 제보를 볼 수 있다</li>
-						</ul>
-						<ul>
-							<li>
-								다른 유저의 페이지에 갔을 때, 자신이 보낸
-								제보장만 볼 수 있다.
-							</li>
-							<li>
-								회원은 환경 보호 활동을 하거나 제보를 당함으로써
-								재화를 쌓거나 잃을 수 있다.
-							</li>
-							<li>
-								최근 일주일/한 달 간 적립된 일별 재화 양과 활동
-								횟수를 조회할 수 있다.
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Tech
-						<ul>
-							<li>REST API로 구현합니다.</li>
-						</ul>
-						<ul>
-							<li>
-								이미지 등록은 클라우드 서비스에 합니다. (Amazon
-								S3)
-							</li>
-						</ul>
-						<ul>
-							<li>모든 기능은 로그인한 유저만 가능합니다.</li>
-						</ul>
-						<ul>
-							<li>AWS EC2에 Docker를 이용해 배포합니다.</li>
-						</ul>
-						<ul>
-							<li>
-								제보장의 개수는 User Service에 요청해서 줄여야
-								합니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								제보를 한 뒤 해당하는 활동에 대한 재화 적립을
-								요청해야합니다.
-							</li>
-						</ul>
-					</li>
-				</ul>
+				<li>
+					<b>Business</b>
+					<ul>
+						<li>
+							제보장을 가진 사용자는 환경 오염을 한 친구를 제보할
+							수 있다.
+							<ul>
+								<li>
+									제보할 때는 대상, 제보 내용, 사진을 입력해야
+									한다.
+								</li>
+								<li>
+									제보 내용이 '기타'인 경우 제보 세부 내용을
+									사용자가 작성해야 한다.
+								</li>
+								<li>제보 시 제보장의 개수가 1개씩 줄어든다.</li>
+							</ul>
+						</li>
+						<li>회원은 자신이 받은 제보를 볼 수 있다</li>
+						<li>
+							다른 유저의 페이지에 갔을 때, 자신이 보낸 제보장만
+							볼 수 있다.
+						</li>
+						<li>
+							회원은 환경 보호 활동을 하거나 제보를 당함으로써
+							재화를 쌓거나 잃을 수 있다.
+						</li>
+						<li>
+							최근 일주일/한 달 간 적립된 일별 재화 양과 활동
+							횟수를 조회할 수 있다.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<b>Tech</b>
+					<ul>
+						<li>REST API로 구현합니다.</li>
+						<li>
+							이미지 등록은 클라우드 서비스에 합니다. (Amazon S3)
+						</li>
+						<li>모든 기능은 로그인한 유저만 가능합니다.</li>
+						<li>AWS EC2에 Docker를 이용해 배포합니다.</li>
+						<li>
+							제보장의 개수는 User Service에 요청해서 줄여야
+							합니다.
+						</li>
+						<li>
+							제보를 한 뒤 해당하는 활동에 대한 재화 적립을
+							요청해야합니다.
+						</li>
+					</ul>
+				</li>
 				<h3>■ Challenge</h3>
-				<ul>
-					<li>Spring Boot를 이용해 REST API를 구현</li>
-				</ul>
-				<ul>
-					<li>Amazon S3와 멀티파트를 이용해 파일 업로드 기능 구현</li>
-				</ul>
-				<ul>
-					<li>
-						MSA 구조로 백엔드 서버를 개발
-						<ul>
-							<li>
-								속도 개선을 위해 통신 후 응답이 필요하지 않은
-								경우 비동기로 진행하기로 했습니다.   
-							</li>
-						</ul>
-						<ul>
-							<li>
-								요청이 누락되지 않게 하기 위해
-								메시지큐(RabbitMQ)를 사용했습니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								응답이 필요한 경우 Feign Client를 사용하여 보다
-								간편하게 코드를 구현했습니다
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						정적 코드 분석 및 테스트 커버리지 측정
-						<ul>
-							<li>
-								테스트 커버리지의 목표를 80%로 하고 테스트
-								코드를 작성했습니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								Junit과 Mockito, Rest Assured를 이용해 테스트
-								코드를 작성했습니다.
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						인수 테스트 주도 개발 진행
-						<ul>
-							<li>
-								휴먼 에러를 줄이고, 코드의 품질과 요구사항에
-								대한 이해를 높이기 위해  인수 테스트 주도 개발을
-								진행했습니다. 
-							</li>
-						</ul>
-						<ul>
-							<li>
-								가독성을 높이기 위해 한글 메서드 네이밍을
-								사용했습니다.
-							</li>
-						</ul>
-						<ul>
-							<li>
-								개인 알림의 경우 디바이스 토큰을 이용해서 발송,
-								전체 알림의 경우 notice topic을 구독하고 있는
-								토큰에게 전송회
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						Github의 Webhook을 이용해 브랜치에 push시 자동으로
-						배포되도록 Jenkins pipeline 작성
-						<ul>
-							<li>
-								Dockerfile을 이용해 이미지 빌드 후 배포 진행
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						pipeline의 build 단계 이후 SonarQube 정적 코드 분석과
-						테스트 커버리지 분석 진행
-					</li>
-				</ul>
+				<li>Spring Boot를 이용해 REST API를 구현</li>
+				<li>Amazon S3와 멀티파트를 이용해 파일 업로드 기능 구현</li>
+				<li>
+					MSA 구조로 백엔드 서버를 개발 (제보 서버, 적립 서버 구현)
+					<img
+						src="../eara-msa.png"
+						className="architecture-image"
+					></img>
+					<p>
+						(맡은 서버와 직접적으로 관련된 아키텍쳐만
+						나타나있습니다. 일부 로직이 생략되어있습니다. 실제로는
+						더 많은 서버가 있습니다.)
+					</p>
+					<ul>
+						<li>
+							속도 개선을 위해 통신 후 응답이 필요하지 않은 경우
+							비동기로 진행하기로 했습니다.   
+						</li>
+						<li>
+							요청이 누락되지 않게 하기 위해 메시지큐(RabbitMQ)를
+							사용했습니다.
+						</li>
+						<li>
+							응답이 필요한 경우 Feign Client를 사용하여 보다
+							간편하게 코드를 구현했습니다
+						</li>
+					</ul>
+				</li>
+				<li>
+					정적 코드 분석 및 테스트 커버리지 측정
+					<ul>
+						<li>
+							테스트 커버리지의 목표를 80%로 하고 테스트 코드를
+							작성했습니다.
+						</li>
+						<li>
+							Junit과 Mockito, Rest Assured를 이용해 테스트 코드를
+							작성했습니다.
+						</li>
+					</ul>
+				</li>
+				<li>
+					인수 테스트 주도 개발 진행
+					<a
+						className="eara-link"
+						href="https://github.com/We-Eokam/Ea-ra/blob/master/accusation/src/test/java/com/eokam/accusation/acceptance/AccusationAcceptanceTest.java"
+					>
+						[인수 테스트 코드 링크]
+					</a>
+					<ul>
+						<li>
+							휴먼 에러를 줄이고, 코드의 품질과 요구사항에 대한
+							이해를 높이기 위해  인수 테스트 주도 개발을
+							진행했습니다. 
+						</li>
+						<li>
+							가독성을 높이기 위해 한글 메서드 네이밍을
+							사용했습니다.
+						</li>
+					</ul>
+				</li>
+				<li>
+					Github의 Webhook을 이용해 브랜치에 push시 자동으로
+					배포되도록 Jenkins pipeline 작성
+					<ul>
+						<li>Dockerfile을 이용해 이미지 빌드 후 배포 진행</li>
+					</ul>
+				</li>
 				<h2>🏫 배운점</h2>
-				<ul>
-					<li>MSA에 대해 학습하고 이해할 수 있었습니다.</li>
-					<li>Spring Cloud에 대해서 학습할 수 있었습니다.</li>
-					<li>
-						RabbitMQ와 Feign Client에 대해 학습할 수 있었습니다.
-					</li>
-				</ul>
+				<li>MSA에 대해 학습하고 이해할 수 있었습니다.</li>
+				<li>Spring Cloud에 대해서 학습할 수 있었습니다.</li>
+				<li>RabbitMQ와 Feign Client에 대해 학습할 수 있었습니다.</li>
 			</React.Fragment>
 		),
 		review: (
