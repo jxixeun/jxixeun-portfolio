@@ -119,3 +119,25 @@
 		width: 100%;
 	}
 }
+
+.popping-link {
+	padding-left: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration-line: none;
+	color: #52525b;
+	display: inline;
+	box-shadow: inset 0 -10px 0 #d6f0ff;
+
+	&:hover {
+		color: #6cb5f9;
+		transition: color 0.3s ease-in-out;
+	}
+}
+
+ul {
+	padding-left: 20px; /* 기본적인 들여쓰기 조절 */
+	margin-left: 0; /* 왼쪽 마진 제거 */
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
